@@ -1,10 +1,10 @@
 <template>
   <div>
-    <router-view></router-view>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
+
     <!-- 子路由出口 -->
-
-
-
 
     <!-- 底部导航栏 -->
     <van-tabbar v-model="active" route>
@@ -18,6 +18,7 @@
 
 <script>
 export default {
+  name:'layout',
   data() {
     return {
       active: 0,
